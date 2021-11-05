@@ -48,6 +48,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.btnA.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
 
+
             }
         })
     }
