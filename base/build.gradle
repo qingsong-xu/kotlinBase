@@ -52,17 +52,20 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    api 'androidx.multidex:multidex:2.0.1'//Androidx版
+    implementation 'androidx.multidex:multidex:2.0.1'//Androidx版
     //https://github.com/alibaba/ARouter:阿里路由
-    implementation 'com.alibaba:arouter-api:1.5.2'
+    api 'com.alibaba:arouter-api:1.5.2'
     annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
     //https://github.com/qingsong-xu/MMKV：使用tencent的kv键值对存储工具
     implementation 'com.tencent:mmkv-static:1.2.10'
     //https://github.com/KeepSafe/ReLinker:loadLibrary使用第三方库
     implementation 'com.getkeepsafe.relinker:relinker:1.4.4'
+
     //okhttp:https://github.com/square/okhttp
-    implementation("com.squareup.okhttp3:okhttp:4.9.2")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.9.2")
-    //https://github.com/square/retrofit : retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    api("com.squareup.okhttp3:okhttp:4.9.2")
+    api("com.squareup.okhttp3:logging-interceptor:4.9.2")
+    //https://github.com/square/retrofit
+    api("com.squareup.retrofit2:retrofit:2.9.0")
+    //https://github.com/square/retrofit/tree/master/retrofit-converters/gson
+    api("com.squareup.retrofit2:converter-gson:2.9.0")
 }

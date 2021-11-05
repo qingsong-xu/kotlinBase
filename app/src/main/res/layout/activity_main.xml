@@ -15,6 +15,15 @@
         android:text="Hello World!" />
 
     <Button
+        android:id="@+id/btnA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="发起一次网络请求" />
+
+    <Button
         android:id="@+id/btnC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -12,6 +12,7 @@ import android.util.Log
 import android.view.View
 import com.xuqingsong.bbc.base.BaseActivity
 import com.xuqingsong.kotlinapp.databinding.ActivityMainBinding
+import java.util.concurrent.Flow
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     val pkName = "cn.demo.prison"
@@ -25,7 +26,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
         //如何使用
         binding.tvName.setText("这是修改的")
         binding.btnC.setOnClickListener(object : View.OnClickListener {
@@ -34,7 +34,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 binding.tvName.setText("我被点击了")
                 val isExist = APPUtil.checkApkExist(this@MainActivity, pkName);
                 if (isExist) {//启动app的指定页面
-//                    startLaunchAPK(this@MainActivity, pkName, "cc.lecent.prison.Home")
                     startLaunchAPK(this@MainActivity, pkName, "cc.lecent.prison.BootActivity")
                 }
             }
@@ -43,6 +42,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.btnExit.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 System.exit(0)
+            }
+        })
+
+        binding.btnA.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+
+
             }
         })
     }
